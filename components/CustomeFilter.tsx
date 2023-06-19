@@ -1,7 +1,7 @@
 import React from "react";
 
-const CustomeFilter = ({props}) => {
-  return <div>{props} </div>;
+const CustomeFilter = () => {
+  return <div> P</div>;
 };
 
 export default CustomeFilter;
