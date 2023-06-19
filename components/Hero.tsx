@@ -2,9 +2,19 @@
 import Image from "next/image";
 import React from "react";
 import CustomeButton from "./CustomeButton";
+import { checkout } from "../checkout";
 
 const Hero = () => {
-  const handelScroll = () => {};
+  const handelScroll = () => {
+    checkout({
+      lineItems: [
+        {
+          price: "price_1NKbvpIcCxw8JIJLe61EKA0K",
+          quantity: 1,
+        },
+      ],
+    });
+  };
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
@@ -16,7 +26,7 @@ const Hero = () => {
           process
         </p>
         <CustomeButton
-          title="Explore Cars"
+          title="Buy"
           containerStyles="bg-primary-blue  text-white rounded-full mt-10"
           handelClick={handelScroll}
         />
